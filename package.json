@@ -1,7 +1,7 @@
 {
   "name": "md-img-base64",
-  "version": "1.0.0",
-  "description": "将 markdown 文件中的本地图片转换为 base64 编码嵌入，实现单文件分发",
+  "version": "1.2.0",
+  "description": "将 markdown 文件中的本地图片转换为 base64 编码嵌入，支持 Markdown 和 HTML img 语法，智能跳过代码块",
   "main": "src/index.js",
   "bin": {
     "md-img-base64": "src/cli.js"

@@ -5,13 +5,25 @@
 ## 功能特性
 
 - ✅ 自动将 markdown 文件中的本地图片转换为 base64 编码
+- ✅ 支持 Markdown 语法：`![alt](path)`
+- ✅ 支持 HTML img 标签：`<img src="path">`
+- ✅ 支持多种引号格式：双引号、单引号、无引号
 - ✅ 支持多种图片格式（PNG, JPG, GIF, SVG, WebP, BMP）
 - ✅ 自动识别相对路径和绝对路径
+- ✅ **智能跳过代码块**：不会转换代码块中的图片引用
+- ✅ **智能跳过行内代码**：不会转换行内代码中的图片引用
 - ✅ 命令行工具，支持直接运行
 - ✅ 可选自动备份原文件
 - ✅ 可作为 Node.js 模块集成到项目中
 
 ## 安装
+
+### 临时使用
+
+```bash
+npx md-img-base64 your-file.md
+```
+ps: 如果需要还原，从md中提取图片，可以使用 @wll8/md-img 包。https://www.npmjs.com/package/@wll8/md-img
 
 ### 全局安装（推荐用于命令行使用）
 
@@ -74,9 +86,28 @@ console.log(base64);
 ```markdown
 # 我的文档
 
+## Markdown 语法
+
 ![本地图片](./assets/image.png)
 
 ![绝对路径图片](/Users/xxx/project/images/pic.jpg)
+
+## HTML img 标签
+
+<img src="./assets/image.png" alt="本地图片">
+
+<img src='./assets/image.png' alt='单引号'>
+
+<img src=./assets/image.png width=200>
+
+## 代码块保护
+
+\`\`\`javascript
+// 代码块中的图片不会被转换
+![代码中的图片](./assets/image.png)
+\`\`\`
+
+这是一段包含 \`![行内代码中的图片](./assets/image.png)\` 的文本。
 ```
 
 运行命令：
@@ -90,10 +121,31 @@ md-img-base64 doc.md
 ```markdown
 # 我的文档
 
+## Markdown 语法
+
 ![本地图片](data:image/png;base64,iVBORw0KGgoAAAANS...)
 
 ![绝对路径图片](data:image/jpeg;base64,/9j/4AAQSkZJRg...)
+
+## HTML img 标签
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANS..." alt="本地图片">
+
+<img src='data:image/png;base64,iVBORw0KGgoAAAANS...' alt='单引号'>
+
+<img src=data:image/png;base64,iVBORw0KGgoAAAANS... width=200>
+
+## 代码块保护
+
+\`\`\`javascript
+// 代码块中的图片不会被转换
+![代码中的图片](./assets/image.png)  ⛔ 保持原样
+\`\`\`
+
+这是一段包含 \`![行内代码中的图片](./assets/image.png)\` 的文本。  ⛔ 保持原样
 ```
+
+> **注意**: 代码块和行内代码中的图片引用会被智能跳过，不会被转换！
 
 ## API 文档
 

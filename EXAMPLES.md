@@ -35,7 +35,17 @@ const { convertMarkdownString } = require('md-img-base64');
 const markdown = `
 # 我的文档
 
+## Markdown 语法
+
 ![本地图片](./images/logo.png)
+
+## HTML img 标签
+
+<img src="./images/logo.png" alt="Logo">
+
+<img src='./images/logo.png' alt='单引号'>
+
+<img src=./images/logo.png width=100>
 `;
 
 const converted = convertMarkdownString(markdown, '/path/to/project');

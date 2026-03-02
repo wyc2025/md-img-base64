@@ -9,8 +9,8 @@ const program = new Command();
 
 program
   .name('md-img-base64')
-  .description('将 markdown 文件中的本地图片转换为 base64 编码嵌入')
-  .version('1.0.0')
+  .description('将 markdown 文件中的本地图片转换为 base64 编码嵌入，智能跳过代码块')
+  .version('1.2.0')
   .argument('<input>', '输入的 markdown 文件路径')
   .option('-o, --output <path>', '输出文件路径（默认覆盖原文件）')
   .option('--no-backup', '不创建备份文件')
