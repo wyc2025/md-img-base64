@@ -16,15 +16,15 @@
     "embed",
     "convert"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "wyc2025 <1429978418@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/md-img-base64#readme",
+  "homepage": "https://github.com/wyc2025/md-img-base64#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/md-img-base64.git"
+    "url": "git+https://github.com/wyc2025/md-img-base64.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/md-img-base64/issues"
+    "url": "https://github.com/wyc2025/md-img-base64/issues"
   },
   "dependencies": {
     "commander": "^11.0.0"

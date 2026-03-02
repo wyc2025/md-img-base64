@@ -4,3 +4,5 @@ node_modules/
 *.bak
 dist/
 coverage/
+test-temp/
+
