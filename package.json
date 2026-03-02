@@ -1,0 +1,35 @@
+{
+  "name": "md-img-base64",
+  "version": "1.0.0",
+  "description": "将 markdown 文件中的本地图片转换为 base64 编码嵌入，实现单文件分发",
+  "main": "src/index.js",
+  "bin": {
+    "md-img-base64": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node src/test.js"
+  },
+  "keywords": [
+    "markdown",
+    "base64",
+    "image",
+    "embed",
+    "convert"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/md-img-base64#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/md-img-base64.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/md-img-base64/issues"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
