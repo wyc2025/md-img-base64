@@ -4,7 +4,7 @@
   "description": "将 markdown 文件中的本地图片转换为 base64 编码嵌入，实现单文件分发",
   "main": "src/index.js",
   "bin": {
-    "md-img-base64": "./src/cli.js"
+    "md-img-base64": "src/cli.js"
   },
   "scripts": {
     "test": "node src/test.js"
